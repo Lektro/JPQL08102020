@@ -15,7 +15,8 @@ public class SearchBeers {
             EntityTransaction tx = em.getTransaction();
             tx.begin();
 
-            TypedQuery<Beers> query = em.createQuery("SELECT b FROM beers AS b ORDER BY b.alcohol", Beers.class);
+            TypedQuery<Beers> query = em.createNamedQuery("findAllBeers", Beers.class);
+
             List<Beers> beers = query.getResultList();
 
             for (Beers b : beers) {
