@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity(name = "beers")
-public class Beers {
+public class Beer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,14 +13,14 @@ public class Beers {
     private float alcohol;
     private float price;
 
-    public Beers(int id, String name, float alcohol, float price) {
+    public Beer(int id, String name, float alcohol, float price) {
         this.id = id;
         this.name = name;
         this.alcohol = alcohol;
         this.price = price;
     }
 
-    public Beers() {
+    public Beer() {
     }
 
     public int getId() {
@@ -58,8 +58,8 @@ public class Beers {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Beers)) return false;
-        Beers beer = (Beers) o;
+        if (!(o instanceof Beer)) return false;
+        Beer beer = (Beer) o;
         return getId() == beer.getId();
     }
 

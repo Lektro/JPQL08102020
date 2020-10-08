@@ -15,15 +15,15 @@ public class SearchBeers {
             EntityTransaction tx = em.getTransaction();
             tx.begin();
 
-            TypedQuery<Beers> query = em.createNamedQuery("findAllKriek", Beers.class);
+            TypedQuery<Beer> query = em.createNamedQuery("findAllBeers", Beer.class);
 
-            List<Beers> beers = query.getResultList();
+            List<Beer> beers = query.getResultList();
 
-            for (Beers b : beers) {
+            for (Beer b : beers) {
                 System.out.println(b.toString());
             }
 
-            System.out.println("Beers Retrieved");
+            System.out.println("Beer Retrieved");
             tx.commit();
         } finally {
             if (em != null)
