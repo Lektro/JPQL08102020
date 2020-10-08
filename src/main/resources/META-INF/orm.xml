@@ -7,4 +7,7 @@
     <named-query name="findAllBeers">
         <query>SELECT b from beers b</query>
     </named-query>
+    <named-query name="findBeersByAlcohol">
+        <query>SELECT b from beers b WHERE b.alcohol >= 10 </query>
+    </named-query>
 </entity-mappings>

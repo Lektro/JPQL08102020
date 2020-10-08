@@ -15,7 +15,7 @@ public class SearchBeers {
             EntityTransaction tx = em.getTransaction();
             tx.begin();
 
-            TypedQuery<Beers> query = em.createNamedQuery("findAllBeers", Beers.class);
+            TypedQuery<Beers> query = em.createNamedQuery("findBeersByAlcohol", Beers.class);
 
             List<Beers> beers = query.getResultList();
 
