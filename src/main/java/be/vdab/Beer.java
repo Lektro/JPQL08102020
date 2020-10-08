@@ -59,8 +59,8 @@ public class Beers {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Beers)) return false;
-        Beers beers = (Beers) o;
-        return getId() == beers.getId();
+        Beers beer = (Beers) o;
+        return getId() == beer.getId();
     }
 
     @Override
