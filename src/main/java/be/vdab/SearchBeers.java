@@ -5,6 +5,7 @@ import java.util.List;
 
 public class SearchBeers {
     public static void main(String[] args) {
+
         EntityManagerFactory emf = null;
         EntityManager em = null;
 
@@ -15,11 +16,7 @@ public class SearchBeers {
             tx.begin();
 
             TypedQuery<Beers> query = em.createQuery("SELECT b FROM beers AS b", Beers.class);
-
-//            query.getResultStream().forEach(System.out::println);
-
             List<Beers> beers = query.getResultList();
-
 
             for (Beers b : beers) {
                 System.out.println(b);

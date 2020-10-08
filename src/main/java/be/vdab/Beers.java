@@ -19,8 +19,8 @@ public class Beers {
         this.alcohol = alcohol;
         this.price = price;
     }
-    public Beers(){
 
+    public Beers() {
     }
 
     public int getId() {
