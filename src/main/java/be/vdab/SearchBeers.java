@@ -16,14 +16,14 @@ public class SearchBeers {
 
             TypedQuery<Beers> query = em.createQuery("SELECT b FROM beers AS b", Beers.class);
 
-            query.getResultStream().forEach(System.out::println);
+//            query.getResultStream().forEach(System.out::println);
 
-/*            List<Beers> beers = query.getResultList();
+            List<Beers> beers = query.getResultList();
 
 
             for (Beers b : beers) {
                 System.out.println(b);
-            }*/
+            }
 
             System.out.println("Beers Retrieved");
             tx.commit();
